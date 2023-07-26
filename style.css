@@ -1,0 +1,135 @@
+header{
+    
+}
+
+.title{
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: znikanie 3.7s linear;
+    animation-fill-mode: forwards;
+}
+
+h1 {
+    font-size: 26vmin;
+    color: rgb(230, 230, 230);
+    font-family: "Space Mono", monospace;
+    margin: 0;
+    animation: dupa 3s linear;
+    animation-fill-mode: forwards;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+}
+
+@keyframes dupa{
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    95%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes znikanie{
+    0%{
+        height: 100vh;
+    }
+    83%{
+        height: 100vh;
+    }
+    100%{
+        height: 0vh;
+    }
+}
+
+body {
+    background-color: black;
+    margin: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
+
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    user-select: none;
+  }
+
+#image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+  }
+
+.kwiatuszek{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    background: white;
+}
+
+a {
+    color: rgb(230, 230, 230);
+    font-family: "Space Mono", monospace;
+    margin: 1.5vmin;
+    font-size: 6vmin;
+    visibility: hidden;
+    animation: pojawianie 3s linear;
+    animation-fill-mode: forwards;
+    position: absolute;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+span {
+    color: rgb(230, 230, 230);
+    font-family: "Space Mono", monospace;
+    margin: 0;
+}
+
+@keyframes pojawianie{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    90%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.loremipsum{
+    margin: 20vmin;
+    width: 80vmin;
+    height: 80vmin;
+}
